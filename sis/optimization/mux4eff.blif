@@ -1,0 +1,10 @@
+.model MUX4EFF
+.inputs RIL L_EFF3 L_EFF2 L_EFF1 L_EFF0
+.outputs O_E3 O_E2 O_E1 O_E0
+.subckt MUX1 S=RIL A=L_EFF3 O=O_E3
+.subckt MUX1 S=RIL A=L_EFF2 O=O_E2
+.subckt MUX1 S=RIL A=L_EFF1 O=O_E1
+.subckt MUX1 S=RIL A=L_EFF0 O=O_E0
+.search mux1.blif
+.end
+

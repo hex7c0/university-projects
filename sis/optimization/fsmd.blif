@@ -1,0 +1,37 @@
+.model FSMD
+.inputs ACC APE CHIU L_EFF3 L_EFF2 L_EFF1 L_EFF0 L_VOL3 L_VOL2 L_VOL1 L_VOL0
+.outputs APR CHIUD ERR
+.latch    ACC LatchOut_v5   1
+.latch    ERR LatchOut_v6   0
+.names APE CONF1 CONF0 LatchOut_v6 [74] APR
+01001 1
+.names CHIU CONF1 CONF0 LatchOut_v6 [74] CHIUD
+00101 1
+.names ACC APE CHIU CONF1 CONF0 LatchOut_v6 [74] ERR
+1----1- 1
+-11---1 1
+---11-1 1
+.names L_EFF3 L_EFF2 L_EFF1 L_EFF0 L_VOL0 [29] [30] X1 CONF1
+1----1-- 1
+-1---01- 1
+--1--001 1
+1--01-00 1
+1--10-00 1
+.names L_EFF0 L_VOL3 L_VOL2 L_VOL1 L_VOL0 [29] [30] X1 CONF0
+-1---1-- 1
+--1--01- 1
+---1-001 1
+0---1000 1
+.names L_EFF3 L_VOL3 [29]
+01 1
+10 1
+.names L_EFF2 L_VOL2 [30]
+01 1
+10 1
+.names L_EFF1 L_VOL1 X1
+01 1
+10 1
+.names ACC LatchOut_v5 [74]
+11 1
+.end
+

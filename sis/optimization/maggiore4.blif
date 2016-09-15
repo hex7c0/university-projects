@@ -1,0 +1,20 @@
+.model MAGGIORE4
+.inputs O_E3 O_E2 O_E1 O_E0 O_V3 O_V2 O_V1 O_V0
+.outputs MAG
+.names O_E3 O_E2 O_E1 O_E0 O_V0 X3 X2 X1 MAG
+1----1-- 1
+-1---01- 1
+--1--001 1
+1--01-00 1
+1--10-00 1
+.names O_E3 O_V3 X3
+01 1
+10 1
+.names O_E2 O_V2 X2
+01 1
+10 1
+.names O_E1 O_V1 X1
+01 1
+10 1
+.end
+

@@ -1,0 +1,27 @@
+.model DATAPATH
+.inputs RIL L_EFF3 L_EFF2 L_EFF1 L_EFF0 L_VOL3 L_VOL2 L_VOL1 L_VOL0
+.outputs CONF1 CONF0
+.names L_EFF3 L_EFF2 L_EFF1 L_EFF0 L_VOL0 [29] [30] X1 [44] CONF1
+1----1--- 1
+-1----1-1 1
+--1---011 1
+1--01-001 1
+1--10-001 1
+.names L_EFF0 L_VOL3 L_VOL2 L_VOL1 L_VOL0 [29] [30] X1 [44] CONF0
+-1---1--- 1
+--1---1-1 1
+---1--011 1
+0---1-001 1
+.names RIL L_EFF3 L_VOL3 [29]
+101 1
+110 1
+.names L_EFF2 L_VOL2 [30]
+01 1
+10 1
+.names L_EFF1 L_VOL1 X1
+01 1
+10 1
+.names RIL [29] [44]
+10 1
+.end
+

@@ -1,0 +1,72 @@
+.model CONTROLLORE
+.inputs ACC APE CHIU CONF0 CONF1
+.outputs RIL APR CHIUD ERR
+.latch    ACC LatchOut_v5   1
+.latch    ERR LatchOut_v6   0
+.start_kiss
+.i 5
+.o 4
+.p 30
+.s 3
+.r s2
+0---- s0 s2 0000
+10-00 s0 s0 1000
+10-01 s0 s0 1100
+1-010 s0 s0 1010
+10-11 s0 s1 0001
+10110 s0 s0 1000
+1100- s0 s0 1000
+11011 s0 s1 0001
+1110- s0 s1 1001
+1111- s0 s1 1001
+0---- s2 s2 0000
+10-00 s2 s0 0000
+10-01 s2 s0 0000
+1-010 s2 s0 0000
+10-11 s2 s0 0000
+10110 s2 s0 0000
+1100- s2 s0 0000
+11011 s2 s0 0000
+1110- s2 s0 0000
+1111- s2 s0 0000
+0---- s1 s2 0000
+10-00 s1 s1 1001
+10-01 s1 s1 1001
+1-010 s1 s1 1001
+10-11 s1 s1 1001
+10110 s1 s1 1001
+1100- s1 s1 1001
+11011 s1 s1 1001
+1110- s1 s1 1001
+1111- s1 s1 1001
+.end_kiss
+.latch_order LatchOut_v5 LatchOut_v6
+.code s0 10
+.code s2 00
+.code s1 11
+.names APE CHIU LatchOut_v6 ERR [16] RIL
+--11- 1
+---01 1
+11-1- 1
+.names APE CONF0 CONF1 LatchOut_v6 [16] APR
+00101 1
+.names CHIU CONF0 CONF1 LatchOut_v6 [16] CHIUD
+01001 1
+.names ACC APE CHIU CONF0 CONF1 LatchOut_v6 [16] ERR
+1----1- 1
+-11---1 1
+---11-1 1
+.names ACC LatchOut_v5 [16]
+11 1
+.exdc 
+.inputs ACC APE CHIU CONF0 CONF1 LatchOut_v5 LatchOut_v6
+.outputs RIL APR CHIUD ERR
+.names LatchOut_v5 LatchOut_v6 RIL
+01 1
+.names LatchOut_v5 LatchOut_v6 APR
+01 1
+.names LatchOut_v5 LatchOut_v6 CHIUD
+01 1
+.names LatchOut_v5 LatchOut_v6 ERR
+01 1
+.end

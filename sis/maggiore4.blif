@@ -1,0 +1,14 @@
+.model MAGGIORE4
+.inputs O_E3 O_E2 O_E1 O_E0 O_V3 O_V2 O_V1 O_V0
+.outputs MAG
+.subckt XOR A=O_E3 B=O_V3 C=X3
+.subckt XOR A=O_E2 B=O_V2 C=X2
+.subckt XOR A=O_E1 B=O_V1 C=X1
+.subckt XOR A=O_E0 B=O_V0 C=X0
+.names O_E3 O_E2 O_E1 O_E3 X3 X2 X1 X0 MAG
+1---1--- 1
+-1--01-- 1
+--1-001- 1
+---10001 1
+.search xor.blif
+.end

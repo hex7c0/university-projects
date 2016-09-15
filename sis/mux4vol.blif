@@ -1,0 +1,10 @@
+.model MUX4VOL
+.inputs RIL L_VOL3 L_VOL2 L_VOL1 L_VOL0
+.outputs O_V3 O_V2 O_V1 O_V0
+.subckt MUX1 S=RIL A=L_VOL3 O=O_V3
+.subckt MUX1 S=RIL A=L_VOL2 O=O_V2
+.subckt MUX1 S=RIL A=L_VOL1 O=O_V1
+.subckt MUX1 S=RIL A=L_VOL0 O=O_V0
+.search mux1.blif
+.end
+

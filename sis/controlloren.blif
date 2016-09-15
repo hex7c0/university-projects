@@ -1,0 +1,81 @@
+.model CONTROLLOREN
+.inputs ACC APE CHIU CONF0 CONF1
+.outputs RIL APR CHIUD ERR
+.latch    [6] LatchOut_v5   0
+.latch    [7] LatchOut_v6   0
+.start_kiss
+.i 5
+.o 4
+.p 30
+.s 3
+.r s2
+0---- s0 s2 0000
+10-00 s0 s0 1000
+10-01 s0 s0 1100
+1-010 s0 s0 1010
+10-11 s0 s1 0001
+10110 s0 s0 1000
+1100- s0 s0 1000
+11011 s0 s1 0001
+1110- s0 s1 1001
+1111- s0 s1 1001
+0---- s2 s2 0000
+10-00 s2 s0 0000
+10-01 s2 s0 0000
+1-010 s2 s0 0000
+10-11 s2 s0 0000
+10110 s2 s0 0000
+1100- s2 s0 0000
+11011 s2 s0 0000
+1110- s2 s0 0000
+1111- s2 s0 0000
+0---- s1 s2 0000
+10-00 s1 s1 1001
+10-01 s1 s1 1001
+1-010 s1 s1 1001
+10-11 s1 s1 1001
+10110 s1 s1 1001
+1100- s1 s1 1001
+11011 s1 s1 1001
+1110- s1 s1 1001
+1111- s1 s1 1001
+.end_kiss
+.latch_order LatchOut_v5 LatchOut_v6
+.code s0 10
+.code s2 00
+.code s1 11
+.names ACC [6]
+1 1
+.names ACC APE CHIU CONF0 CONF1 LatchOut_v5 LatchOut_v6 [7]
+1-----1 1
+111--1- 1
+1--111- 1
+.names ACC APE CHIU CONF0 CONF1 LatchOut_v5 LatchOut_v6 RIL
+1-----1 1
+1--0-1- 1
+1---01- 1
+111--1- 1
+.names ACC APE CONF0 CONF1 LatchOut_v5 LatchOut_v6 APR
+100110 1
+.names ACC CHIU CONF0 CONF1 LatchOut_v5 LatchOut_v6 CHIUD
+101010 1
+.names ACC APE CHIU CONF0 CONF1 LatchOut_v5 LatchOut_v6 ERR
+1-----1 1
+111--1- 1
+1--111- 1
+.exdc 
+.inputs ACC APE CHIU CONF0 CONF1 LatchOut_v5 LatchOut_v6
+.outputs [6] [7] RIL APR CHIUD ERR
+.names LatchOut_v5 LatchOut_v6 [6]
+01 1
+.names LatchOut_v5 LatchOut_v6 [7]
+01 1
+.names LatchOut_v5 LatchOut_v6 RIL
+01 1
+.names LatchOut_v5 LatchOut_v6 APR
+01 1
+.names LatchOut_v5 LatchOut_v6 CHIUD
+01 1
+.names LatchOut_v5 LatchOut_v6 ERR
+01 1
+.end

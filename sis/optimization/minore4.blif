@@ -1,0 +1,17 @@
+.model MINORE4
+.inputs O_E3 O_E2 O_E1 O_E0 O_V3 O_V2 O_V1 O_V0
+.outputs MIN
+.names O_E1 O_E0 O_V3 O_V2 O_V1 O_V0 X3 X2 MIN
+--1---1- 1
+---1--01 1
+0---1-00 1
+00---100 1
+-0--1100 1
+.names O_E3 O_V3 X3
+01 1
+10 1
+.names O_E2 O_V2 X2
+01 1
+10 1
+.end
+
